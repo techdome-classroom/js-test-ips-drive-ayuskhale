@@ -1,4 +1,7 @@
 function smallestMissingPositiveInteger(nums) {
+
+    // Implement the function smallest_missing_positive_integer
+
     let n = nums.length;
     let present = new Array(n + 1).fill(false);
 

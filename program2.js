@@ -1,7 +1,7 @@
 function longestSubstring(s) {
     if (!s) return 0;
 
-    let charIndex = {abcabcbb};
+    let charIndex = {};
     let maxLength = 0;
     let start = 0;
 

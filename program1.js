@@ -1,7 +1,4 @@
 function smallestMissingPositiveInteger(nums) {
-
-  // Implement the function smallest_missing_positive_integer
-
   let n = nums.length;
   let present = new Array(n + 1).fill(false);
 
@@ -20,8 +17,6 @@ function smallestMissingPositiveInteger(nums) {
   return n + 1;
 }
 
-let arr = [3, 4, -1, -1];
-console.log(smallestMissingPositiveInteger(arr));
-  
 module.exports = smallestMissingPositiveInteger;
+
 

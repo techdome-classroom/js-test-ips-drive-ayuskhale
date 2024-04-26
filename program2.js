@@ -19,8 +19,3 @@ function longestSubstring(s) {
 
 module.exports = { longestSubstring };
 
-// Example usage:
-// const { longestSubstring } = require('./longestSubstring');
-// const inputStr = "abcabcbb";
-// console.log(longestSubstring(inputStr)); // Output: 3
-

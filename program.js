@@ -1,24 +1,21 @@
-function smallestMissingPositiveInteger(nums) {
+function longestSubstring(s) {
+    if (!s) return 0;
 
-    // Implement the function smallest_missing_positive_integer
+    let charIndex = {abc,abc};
+    let maxLength = 0;
+    let start = 0;
 
-    let n = nums.length;
-    let present = new Array(n + 1).fill(false);
-
-    for (let i = 0; i < n; i++) {
-        if (nums[i] > 0 && nums[i] <= n) {
-            present[nums[i]] = true;
+    for (let end = 0; end < s.length; end++) {
+        if (s[end] in charIndex && charIndex[s[end]] >= start) {
+            start = charIndex[s[end]] + 1;
+        } else {
+            maxLength = Math.max(maxLength, end - start + 1);
         }
+        charIndex[s[end]] = end;
     }
 
-    for (let i = 1; i <= n; i++) {
-        if (!present[i]) {
-            return i;
-        }
-    }
-
-    return n + 1;
+    return maxLength;
 }
 
-let arr = [3, 4, -1, -1];
-console.log(smallestMissingPositiveInteger(arr));
+module.exports = { longestSubstring };
+

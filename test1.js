@@ -1,5 +1,5 @@
-const smallestMissingPositiveInteger = require('./program1');
 const assert = require("assert");
+const smallestMissingPositiveInteger = require('./program1');
 
 
 describe("Test cases for Smallest Positive Integer function", function () {

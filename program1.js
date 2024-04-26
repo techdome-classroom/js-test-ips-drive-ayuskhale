@@ -22,7 +22,6 @@ function smallestMissingPositiveInteger(nums) {
 
 let arr = [3, 4, -1, -1];
 console.log(smallestMissingPositiveInteger(arr));
-
   
-  module.exports = smallestMissingPositiveInteger;
+module.exports = smallestMissingPositiveInteger;
 

@@ -1,21 +1,9 @@
 function smallestMissingPositiveInteger(nums) {
 
-  nums = nums.filter(num => num > 0);
+
+    // Implement the function smallest_missing_positive_integer
   
-  nums.sort((a, b) => a - b);
-  
-  let smallestMissing = 1;
-  for (const num of nums) {
-      if (num === smallestMissing) {
-          smallestMissing++;
-      } else if (num > smallestMissing) {
-          return smallestMissing;
-      }
   }
   
-  return smallestMissing;
-}
-
-module.exports = smallestMissingPositiveInteger;
-
+  module.exports = smallestMissingPositiveInteger;
 

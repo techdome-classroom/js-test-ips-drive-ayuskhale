@@ -1,30 +1,21 @@
-function solution(A)
-{
-    let n = A.length;
-    let present = new Array(n+1);
-    
-    
-    for(let i=0;i<n+1;i++)
-    {
-        present[i]=false;
-    }
-    for (let i = 0; i < n; i++)
-    {
-        if (A[i] > 0 && A[i] <= n)
-        {
-            present[A[i]] = true;
+function smallestMissingPositiveInteger(nums) {
+    let n = nums.length;
+    let present = new Array(n + 1).fill(false);
+
+    for (let i = 0; i < n; i++) {
+        if (nums[i] > 0 && nums[i] <= n) {
+            present[nums[i]] = true;
         }
     }
 
-    for (let i = 1; i <= n; i++)
-    {
-        if (!present[i])
-        {
+    for (let i = 1; i <= n; i++) {
+        if (!present[i]) {
             return i;
         }
     }
+
     return n + 1;
 }
 
-let arr = [0, 10, 2, -10, -20]
-console.log(solution(arr));
+let arr = [3, 4, -1, -1];
+console.log(smallestMissingPositiveInteger(arr));
